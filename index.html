@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e51620">
+
+<title>Blood Connect | রক্ত দিন, জীবন বাঁচান</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red: #e51620;
+  --red-dark: #bd1019;
+  --pink: #fff1f2;
+  --white: #ffffff;
+  --dark: #191b20;
+  --muted: #6b7280;
+  --border: #ffe0e2;
+  --shadow: 0 12px 35px rgba(190, 16, 25, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans Bengali", sans-serif;
+  background: #fffafa;
+  color: var(--dark);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #f6e4e5;
+  box-shadow: 0 3px 15px rgba(0,0,0,.035);
+}
+
+.nav-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  color: var(--red);
+  filter: drop-shadow(0 4px 5px #e5162025);
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--red);
+  line-height: 1.4;
+}
+
+.brand-tagline {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 0 65px;
+  background:
+    radial-gradient(circle at 80% 35%, #ffe1e3 0, transparent 32%),
+    linear-gradient(135deg, #fffafa, #fff0f1);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 1px solid #f7c5c8;
+  border-radius: 50%;
+  right: -100px;
+  top: -90px;
+  opacity: .6;
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: #ffe0e2;
+  color: var(--red-dark);
+  padding: 6px 15px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--red);
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #555b65;
+  max-width: 550px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid var(--red);
+  transition: transform .25s, box-shadow .25s, background .25s;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: white;
+  box-shadow: 0 7px 18px #e5162030;
+}
+
+.btn-outline {
+  color: var(--red);
+  background: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px #e5162025;
+}
+
+.btn-primary:hover {
+  background: var(--red-dark);
+}
+
+/* HERO VISUAL */
+
+.hero-visual {
+  min-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.visual-circle {
+  width: min(350px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffe1e3, #fff5f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: inset 0 0 45px #e516200b;
+}
+
+.blood-art {
+  font-size: 150px;
+  filter: drop-shadow(0 12px 12px #e5162030);
+  animation: float 4s ease-in-out infinite;
+}
+
+.visual-badge {
+  position: absolute;
+  bottom: 30px;
+  right: -5px;
+  padding: 13px 17px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
+
+.visual-badge span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* DONOR / RECEIVER */
+
+.choice-section {
+  padding: 65px 0;
+  background: white;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-size: clamp(25px, 3.5vw, 36px);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 span {
+  color: var(--red);
+}
+
+.section-heading p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 920px;
+  margin: auto;
+}
+
+.choice-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.choice-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px #b9101918;
+}
+
+.choice-top {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 18px;
+}
+
+.choice-icon {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 20px;
+  background: var(--pink);
+  color: var(--red);
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}
+
+.choice-card h3 {
+  color: var(--red-dark);
+  font-size: 23px;
+  line-height: 1.5;
+}
+
+.choice-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.choice-card .btn {
+  width: 100%;
+}
+
+/* FEATURES */
+
+.features {
+  padding: 65px 0;
+  background: linear-gradient(135deg, #fff0f1, #fffafa);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature-card {
+  padding: 25px 17px;
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid #ffe1e3;
+  transition: transform .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 17px;
+  margin: 0 auto 15px;
+  background: #ffe2e4;
+  color: var(--red);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* CALL TO ACTION */
+
+.cta {
+  padding: 60px 0;
+  background: white;
+}
+
+.cta-box {
+  background: linear-gradient(120deg, #c80e19, #f02732);
+  border-radius: 26px;
+  padding: 38px 35px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 16px 35px #e5162028;
+}
+
+.cta-box h2 {
+  font-size: clamp(22px, 3vw, 30px);
+  margin-bottom: 8px;
+}
+
+.cta-box p {
+  font-size: 14px;
+  color: #fff0f1;
+}
+
+.cta-box .btn {
+  background: white;
+  color: var(--red);
+  border-color: white;
+  flex-shrink: 0;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #191b20;
+  color: white;
+  padding: 38px 0 18px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding-bottom: 25px;
+}
+
+.footer .brand-tagline {
+  color: #b9bbc2;
+}
+
+.footer-description {
+  color: #b9bbc2;
+  font-size: 13px;
+  max-width: 370px;
+  margin-top: 12px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #e3e4e8;
+  font-size: 13px;
+  transition: color .2s;
+}
+
+.footer-links a:hover {
+  color: #ff6870;
+}
+
+.footer-bottom {
+  border-top: 1px solid #35373e;
+  padding-top: 17px;
+  text-align: center;
+  color: #b9bbc2;
+  font-size: 11px;
+}
+
+/* ANIMATIONS */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.hero-visual {
+  animation: appear .8s ease both;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero-grid {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .visual-circle {
+    width: 270px;
+  }
+
+  .blood-art {
+    font-size: 120px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .nav-inner {
+    min-height: 68px;
+    gap: 8px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 40px;
+    font-size: 29px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .brand-tagline {
+    font-size: 9px;
+  }
+
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links a:not(.nav-button) {
+    display: none;
+  }
+
+  .hero {
+    padding: 38px 0 45px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    line-height: 1.35;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    margin: 0 auto 22px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .btn {
+    min-height: 45px;
+    padding: 11px 17px;
+    font-size: 12px;
+  }
+
+  .hero-visual {
+    min-height: 245px;
+  }
+
+  .visual-circle {
+    width: 235px;
+  }
+
+  .blood-art {
+    font-size: 105px;
+  }
+
+  .visual-badge {
+    right: -5px;
+    bottom: 8px;
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .choice-section,
+  .features {
+    padding: 45px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 25px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .choice-card {
+    padding: 23px;
+    border-radius: 20px;
+  }
+
+  .choice-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    font-size: 25px;
+  }
+
+  .choice-card h3 {
+    font-size: 20px;
+  }
+
+  .choice-card p {
+    font-size: 12px;
+  }
+
+  .features-grid {
+    gap: 12px;
+  }
+
+  .feature-card {
+    padding: 20px 10px;
+    border-radius: 16px;
+  }
+
+  .feature-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .feature-card h3 {
+    font-size: 13px;
+  }
+
+  .feature-card p {
+    font-size: 11px;
+  }
+
+  .cta {
+    padding: 40px 0;
+  }
+
+  .cta-box {
+    padding: 27px 20px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 22px;
+  }
+
+  .cta-box h2 {
+    font-size: 22px;
+  }
+
+  .cta-box p {
+    font-size: 12px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .footer-description {
+    font-size: 12px;
+  }
+
+  .footer-links {
+    gap: 14px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a href="index.html" class="brand">
+      <div class="brand-icon">🩸</div>
+      <div>
+        <div class="brand-name">Blood Connect</div>
+        <div class="brand-tagline">রক্ত দিন, জীবন বাঁচান</div>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home" class="active">হোম</a>
+      <a href="#about">আমাদের সম্পর্কে</a>
+      <a href="#features">কিভাবে কাজ করে</a>
+      <a href="#footer">যোগাযোগ</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <span class="eyebrow">❤️ একটি মানবিক উদ্যোগ</span>
+
+      <h1>
+        রক্ত দিন,
+        <span>জীবন বাঁচান</span>
+      </h1>
+
+      <p class="hero-description">
+        Blood Connect হলো আপনার কলেজের শিক্ষার্থী,
+        শিক্ষক ও কর্মচারীদের জন্য একটি নিরাপদ
+        প্ল্যাটফর্ম, যেখানে আপনি সহজেই খুঁজে পাবেন
+        রক্তদাতা।
+      </p>
+
+      <div class="hero-actions">
+        <a href="#choices" class="btn btn-primary">
+          শুরু করুন <span>→</span>
+        </a>
+
+        <a href="#about" class="btn btn-outline">
+          আরও জানুন
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-circle">
+        <div class="blood-art">🩸</div>
+
+        <div class="visual-badge">
+          ❤️ মানবতার পাশে
+          <span>একটি রক্তদান, একটি নতুন আশা</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DONOR AND RECEIVER -->
+<section class="choice-section" id="choices">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">আপনার ভূমিকা বেছে নিন</span>
+
+      <h2>
+        আপনি <span>কোনটি?</span>
+      </h2>
+
+      <p>
+        রক্তদাতা হয়ে জীবন বাঁচান অথবা প্রয়োজনের
+        সময়ে রক্তদাতা খুঁজে নিন।
+      </p>
+    </div>
+
+    <div class="choice-grid">
+
+      <!-- DONOR CARD -->
+      <article class="choice-card">
+        <div class="choice-top">
+          <div class="choice-icon">🩸</div>
+
+          <div>
+            <h3>Blood Donor</h3>
+            <p>আমি রক্ত দান করতে চাই</p>
+          </div>
+        </div>
+
+        <p>
+          আপনার রক্তের মাধ্যমে একজন মানুষের
+          জীবন বাঁচাতে এগিয়ে আসুন।
+        </p>
+
+        <a href="donor-registration.html" class="btn btn-primary">
+          এগিয়ে যান <span>→</span>
+        </a>
+      </article>
+
+      <!-- RECEIVER CARD -->
+      <article class="choice-card">
+        <div class="choice-top">
+          <div class="choice-icon">🫀</div>
+
+          <div>
+            <h3>Blood Receiver</h3>
+            <p>আমার রক্ত প্রয়োজন</p>
+          </div>
+        </div>
+
+        <p>
+          প্রয়োজনীয় রক্তের গ্রুপ ও অবস্থান
+          নির্বাচন করে রক্তদাতা খুঁজুন।
+        </p>
+
+        <a href="receiver-login.html" class="btn btn-outline">
+          এগিয়ে যান <span>→</span>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">কেন Blood Connect?</span>
+
+      <h2>
+        রক্তদানে <span>প্রযুক্তির ছোঁয়া</span>
+      </h2>
+
+      <p>
+        প্রযুক্তির মাধ্যমে রক্তদাতা ও রক্তগ্রহীতার
+        মধ্যে যোগাযোগ সহজ করার আমাদের প্রচেষ্টা।
+      </p>
+    </div>
+
+    <div class="features-grid">
+
+      <article class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>নিরাপত্তা ও নির্ভরযোগ্যতা</h3>
+        <p>
+          কলেজভিত্তিক সদস্যদের জন্য
+          নিরাপদ প্ল্যাটফর্ম তৈরির উদ্যোগ।
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🔎</div>
+        <h3>সহজে রক্তদাতা খোঁজা</h3>
+        <p>
+          রক্তের গ্রুপ ও অবস্থান অনুযায়ী
+          রক্তদাতা খোঁজার সুবিধা।
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>দ্রুত যোগাযোগ</h3>
+        <p>
+          প্রয়োজনের সময়ে সম্ভাব্য
+          রক্তদাতার সঙ্গে যোগাযোগ করুন।
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">❤️</div>
+        <h3>মানবতার পাশে</h3>
+        <p>
+          স্বেচ্ছায় রক্তদানের মাধ্যমে
+          মানবিক সমাজ গড়ে তুলি।
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta" id="about">
+  <div class="container">
+    <div class="cta-box">
+
+      <div>
+        <h2>আপনার এক ফোঁটা রক্ত, কারও নতুন জীবন ❤️</h2>
+
+        <p>
+          আজই Blood Connect-এর সঙ্গে যুক্ত হোন।
+          রক্তদানের মাধ্যমে মানবতার পাশে দাঁড়ান।
+        </p>
+      </div>
+
+      <a href="donor-registration.html" class="btn">
+        রক্তদাতা হোন →
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+
+    <div class="footer-main">
+
+      <div>
+        <a href="index.html" class="brand">
+          <div class="brand-icon">🩸</div>
+
+          <div>
+            <div class="brand-name">Blood Connect</div>
+            <div class="brand-tagline">
+              রক্ত দিন, জীবন বাঁচান
+            </div>
+          </div>
+        </a>
+
+        <p class="footer-description">
+          প্রযুক্তি ও মানবিকতার সমন্বয়ে
+          রক্তদাতা খোঁজার একটি কলেজভিত্তিক উদ্যোগ।
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">হোম</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#features">আমাদের সুবিধা</a>
+        <a href="#choices">শুরু করুন</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Blood Connect. সর্বস্বত্ব সংরক্ষিত।
+      <br>
+      রক্ত দিন, জীবন বাঁচান ❤️
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
